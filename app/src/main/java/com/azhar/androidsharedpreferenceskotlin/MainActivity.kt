@@ -31,6 +31,13 @@ import kotlinx.android.synthetic.main.activity_main.*
      }
 
      private fun loadData() {
+         val sharedPreferences = getSharedPreferences("sharedPreps", Context.MODE_PRIVATE)
+
+         val id = sharedPreferences.getInt("id_key", 0)
+         val name = sharedPreferences.getString("name_key", null)
+
+         idEtId.setText(id.toString())
+         nameEtId.setText(name)
 
      }
 
