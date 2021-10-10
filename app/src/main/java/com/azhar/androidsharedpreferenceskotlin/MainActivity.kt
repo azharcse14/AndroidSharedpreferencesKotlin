@@ -6,15 +6,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
  class MainActivity : AppCompatActivity() {
 
-     var id = 0
-     var name = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        id = Integer.parseInt(idEtId.text.toString())
-        name = nameEtId.text.toString()
 
         clearBtnId.setOnClickListener {
             clearData()
