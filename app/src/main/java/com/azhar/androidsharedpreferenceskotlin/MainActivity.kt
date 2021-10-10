@@ -1,5 +1,6 @@
  package com.azhar.androidsharedpreferenceskotlin
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,6 +35,13 @@ import kotlinx.android.synthetic.main.activity_main.*
      }
 
      private fun saveData() {
+
+         val sharedPreferences = getSharedPreferences("sharedPreps", Context.MODE_PRIVATE)
+         val editor = sharedPreferences.edit()
+
+         editor.putInt("id_key", id)
+         editor.putString("name_key", name)
+         editor.apply()
 
      }
  }
